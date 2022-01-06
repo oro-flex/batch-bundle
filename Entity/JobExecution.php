@@ -93,7 +93,7 @@ class JobExecution
     private ?string $exitDescription = null;
 
     /**
-     * @ORM\Column(name="failure_exceptions", type="array", nullable=true)
+     * @ORM\Column(name="failure_exceptions", type="json", options={"jsonb"=true}, nullable=true)
      */
     private ?array $failureExceptions;
 

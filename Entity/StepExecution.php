@@ -80,12 +80,12 @@ class StepExecution
     private bool $terminateOnly = false;
 
     /**
-     * @ORM\Column(name="failure_exceptions", type="array", nullable=true)
+     * @ORM\Column(name="failure_exceptions", type="json", options={"jsonb"=true}, nullable=true)
      */
     private ?array $failureExceptions;
 
     /**
-     * @ORM\Column(name="errors", type="array")
+     * @ORM\Column(name="errors", type="json", options={"jsonb"=true})
      */
     private array $errors;
 
@@ -102,7 +102,7 @@ class StepExecution
     private Collection $warnings;
 
     /**
-     * @ORM\Column(name="summary", type="array")
+     * @ORM\Column(name="summary", type="json", options={"jsonb"=true})
      */
     private array $summary = [];
 

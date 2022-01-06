@@ -2,9 +2,10 @@
 
 namespace Oro\Bundle\BatchBundle\DependencyInjection\Compiler;
 
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
-class FlexDependenciesPass
+class FlexDependenciesPass implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}

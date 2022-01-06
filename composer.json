@@ -14,9 +14,11 @@
         }
     ],
     "require": {
-        "php": "~8.0.0",
-        "oro-flex/config": "5.0.*",
-        "symfony/serializer": "~5.4.0"
+        "php": "~7.4.14 || ~8.0.0",
+        "oro-flex/cache-bundle": "4.2.*",
+        "doctrine/doctrine-bundle": "^2.5.0",
+        "doctrine/orm": "^2.9.0",
+        "symfony/translation": "*"
     },
     "require-dev": {
     },
@@ -27,10 +29,10 @@
     "prefer-stable": true,
     "extra": {
         "symfony": {
-            "require": "5.4.*"
+            "require": "4.4.*"
         },
         "branch-alias": {
-            "dev-master": "5.0-dev"
+            "dev-master": "4.2-dev"
         }
     },
     "autoload": {

@@ -24,7 +24,9 @@ class BatchLogHandler extends StreamHandler
         $this->useLocking = false;
         $this->bubble = true;
 
-        $this->setupStringChunkSize();
+        if (method_exists(Utils::class, 'expandIniShorthandBytes')) {
+            $this->setupStringChunkSize();
+        }
         $this->setLevel(Logger::DEBUG);
     }
 

@@ -48,7 +48,7 @@ class OroBatchBundleInstaller implements Installation
         $table->addColumn('updated_time', 'datetime', ['notnull' => false]);
         $table->addColumn('exit_code', 'string', ['notnull' => false, 'length' => 255]);
         $table->addColumn('exit_description', 'text', ['notnull' => false]);
-        $table->addColumn('failure_exceptions', 'array', ['notnull' => false, 'comment' => '(DC2Type:array)']);
+        $table->addColumn('failure_exceptions', 'json', ['jsonb' => true, 'notnull' => false,]);
         $table->addColumn('log_file', 'string', ['notnull' => false, 'length' => 255]);
         $table->addColumn('pid', 'integer', ['notnull' => false]);
         $table->addColumn('user', 'string', ['notnull' => false, 'length' => 255]);
@@ -69,7 +69,7 @@ class OroBatchBundleInstaller implements Installation
         $table->addColumn('status', 'integer', []);
         $table->addColumn('connector', 'string', ['length' => 255]);
         $table->addColumn('type', 'string', ['length' => 255]);
-        $table->addColumn('rawConfiguration', 'array', ['comment' => '(DC2Type:array)']);
+        $table->addColumn('rawConfiguration', 'json', ['jsonb' => true,]);
         $table->setPrimaryKey(['id']);
         $table->addUniqueIndex(['code'], 'UNIQ_35B1ECC777153098');
     }
@@ -91,9 +91,9 @@ class OroBatchBundleInstaller implements Installation
         $table->addColumn('exit_code', 'string', ['notnull' => false, 'length' => 255]);
         $table->addColumn('exit_description', 'text', ['notnull' => false]);
         $table->addColumn('terminate_only', 'boolean', ['notnull' => false]);
-        $table->addColumn('failure_exceptions', 'array', ['notnull' => false, 'comment' => '(DC2Type:array)']);
-        $table->addColumn('errors', 'array', ['comment' => '(DC2Type:array)']);
-        $table->addColumn('summary', 'array', ['comment' => '(DC2Type:array)']);
+        $table->addColumn('failure_exceptions', 'json', ['jsonb' => true, 'notnull' => false,]);
+        $table->addColumn('errors', 'json', ['jsonb' => true,]);
+        $table->addColumn('summary', 'json', ['jsonb' => true,]);
         $table->setPrimaryKey(['id']);
         $table->addIndex(['job_execution_id'], 'IDX_3B30CD3C5871C06B', []);
     }

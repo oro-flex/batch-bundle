@@ -64,7 +64,7 @@ class JobInstance
     protected ?string $type;
 
     /**
-     * @ORM\Column(type="array")
+     * @ORM\Column(type="json", options={"jsonb"=true})
      */
     protected array $rawConfiguration = [];
 
