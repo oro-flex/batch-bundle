@@ -1,0 +1,42 @@
+{
+    "name": "oro-flex/batch-bundle",
+    "description": "OroBatchBundle is a Batch architecture bundle inspired by Spring Batch and [AkeneoBatchBundle](https://github.com/akeneo/BatchBundle). Enables the batch architecture usage for data processing.",
+    "homepage": "https://github.com/oroinc/platform/tree/master/src/Oro/Bundle/BatchBundle",
+    "license": "MIT",
+    "authors": [
+	    {
+            "name": "Nikita Makarov",
+            "email": "mesaverde228@gmail.com"
+        },
+        {
+            "name": "Oro, Inc",
+            "homepage": "https://oroinc.com/"
+        }
+    ],
+    "require": {
+        "php": "~8.0.0",
+        "oro-flex/config": "5.0.*",
+        "symfony/serializer": "~5.4.0"
+    },
+    "require-dev": {
+    },
+    "conflict": {
+        "oro/platform": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "symfony": {
+            "require": "5.4.*"
+        },
+        "branch-alias": {
+            "dev-master": "5.0-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Oro\\Bundle\\BatchBundle\\": ""
+        },
+        "exclude-from-classmap": ["/Tests/"]
+    }
+}
